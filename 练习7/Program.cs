@@ -13,9 +13,21 @@ namespace 练习7
             //7、写一个方法 计算圆的面积和周长  面积是 pI*R*R  周长是 2*Pi*r
             Console.WriteLine("请输入圆的半径：");
             double r = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("圆的面积是{0:0.00}，周长是{1:0.00}", GetArea(r), GetPerimeter(r));
+            double perimeter;
+            double area;
+            GetPerimeterArea(r, out perimeter, out area);
+            //Console.WriteLine("圆的面积是{0:0.00}，周长是{1:0.00}", GetArea(r), GetPerimeter(r));
+            Console.WriteLine("圆的面积是{0:0.00}，周长是{1:0.00}", area, perimeter);
+
             Console.ReadKey();
         }
+
+        public static void GetPerimeterArea(double r, out double perimeter, out double area)
+        {
+            area = Math.PI * r * r;
+            perimeter = 2 * r * Math.PI;
+        }
+
         /// <summary>
         /// 计算圆的面积
         /// </summary>

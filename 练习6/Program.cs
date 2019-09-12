@@ -13,7 +13,7 @@ namespace 练习6
             //97、请将字符串数组{ "中国", "美国", "巴西", "澳大利亚", "加拿大" }中的内容反转
             string[] s = { "中国", "美国", "巴西", "澳大利亚", "加拿大" };
             Rev(s);
-            for(int i=0;i<s.Length;i++)
+            for (int i = 0; i < s.Length; i++)
             {
                 Console.WriteLine(s[i]);
             }
@@ -21,11 +21,11 @@ namespace 练习6
         }
         public static void Rev(string[] s)
         {
-            for(int i=0;i<s.Length;i++)
+            for (int i = 0; i < s.Length / 2; i++)
             {
                 string temp = s[i];
-                s[i] = s[s.Length - i-1];
-                s[s.Length - i-1] = temp;
+                s[i] = s[s.Length - i - 1];
+                s[s.Length - i - 1] = temp;
             }
         }
     }

@@ -10,6 +10,8 @@ namespace 方法练习
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello GitHub!");
+            Console.ReadLine();
         }
     }
 }

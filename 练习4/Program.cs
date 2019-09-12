@@ -15,7 +15,7 @@ namespace 练习4
             Console.WriteLine("请输入数字：");
             string num1 = Console.ReadLine();
             int n = Judge(num1);
-            bool b = ZhiShu(n);
+            bool b = IsPrime(n);
             if (b)
                 Console.WriteLine("{0}是质数", n);
             else Console.WriteLine("{0}不是质数", n);
@@ -26,7 +26,7 @@ namespace 练习4
         /// </summary>
         /// <param name="n">用户输入的数</param>
         /// <returns>返回bool值</returns>
-        public static bool ZhiShu(int n)
+        public static bool IsPrime(int n)
         {
             if (n < 2) return false;
             else
